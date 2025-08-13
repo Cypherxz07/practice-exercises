@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+</head>
+<body>
+    <h2>Color Flipper</h2>
+    <button onclick="changeColor('green')" style="background-color: green;">Green</button>
+    <button onclick="changeColor('red')" style="background-color: red;">Red</button>
+    <button onclick="changeColor('blue')" style="background-color: blue;">Blue</button>
+    <button onclick="changeColor(randomColor())">Random</button>
+</body>
+<script>
+    function changeColor (color) {
+        document.body.style.backgroundColor = color;
+    }
+
+    function randomColor () {
+        var r = Math.round(Math.random() * 255);
+        var g = Math.round(Math.random() * 255);
+        var b = Math.round(Math.random() * 255);
+
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+</script>
+<style>
+    button {
+        border-radius: 5px;
+        width: 100px;
+        height: 40px;
+        margin: 5px;
+    }
+</style>
+</html>
